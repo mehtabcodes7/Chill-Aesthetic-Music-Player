@@ -1,0 +1,252 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/Images/BG2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 5px 20px; /* Reduced padding */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    font-family: 'Lobster', cursive; /* Chill font */
+    font-size: 1.4rem; /* Smaller logo size */
+    color: #fff; /* Logo color */
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.logo a:hover {
+    color: #fdcbcb;
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Horizontal layout */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Reduced spacing between links */
+}
+
+.nav-links a {
+    font-weight: bolder;
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Link color */
+    font-family: 'Open Sans', sans-serif; /* Chill font */
+    font-size: 0.9rem; /* Smaller link size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-links a:hover {
+    color: #fdcbcb; /* Change color on hover */
+}
+
+/* Player Container */
+.player {
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 15px; /* Reduced padding */
+    width: 80%; /* Flexible width */
+    max-width: 300px; /* Maximum width */
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #000000;
+    margin-top: 100px; /* Space for fixed navbar */
+}
+
+/* Album Cover */
+#album-cover {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Title */
+h1 {
+    margin-bottom: 10px; /* Reduced margin */
+    font-size: 1.2rem; /* Smaller title size */
+}
+
+/* Control Buttons */
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0; /* Reduced margin */
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 3px; /* Adjusted margin */
+    padding: 2px; /* Reduced padding */
+    transition: transform 0.2s;
+    width: 40px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button img {
+    width: 100%; /* Ensure the image fills the button */
+    height: 100%; /* Ensure the image fills the button */
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    margin-top: 10px; /* Increased margin for better spacing */
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default styling */
+    width: 100%;
+    height: 8px; /* Height of the track */
+    background: transparent; /* Make the background transparent */
+    position: relative; /* Position relative for pseudo-elements */
+    outline: none; /* Remove outline */
+}
+
+/* Track Styles */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px; /* Height of the track */
+    border-radius: 5px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Thumb Styles */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    width: 20px; /* Increased width for thumb */
+    height: 20px; /* Increased height for thumb */
+    background: #ff4081; /* Thumb color */
+    border-radius: 50%; /* Rounded thumb */
+    cursor: pointer;
+    margin-top: -6px; /* Align the thumb vertically with the track */
+}
+
+/* For Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ff4081;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* For IE */
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ff4081;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Progress bar with gradient effect */
+input[type="range"] {
+    background: linear-gradient(to right, #ff4081 var(--progress, 0%), rgba(255, 255, 255, 0.3) var(--progress, 0%));
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #fff;
+    margin-top: auto;
+    padding: 10px 0;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 0 5px; /* Reduced spacing between icons */
+}
+
+.social-media img {
+    width: 35px; /* Set icon size */
+    height: 35px; /* Set icon size */
+    transition: transform 0.2s;
+}
+
+.social-media img:hover {
+    transform: scale(1.3); /* Scale effect on hover */
+}
+
+/* Fade-in and Fade-out Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .player {
+        width: 90%; /* More flexible width on smaller screens */
+    }
+
+    .logo {
+        font-size: 1.2rem; /* Smaller logo size */
+    }
+
+    .nav-links a {
+        font-size: 0.8rem; /* Smaller link size */
+    }
+}
